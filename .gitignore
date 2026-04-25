@@ -1,0 +1,10 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+
+# 개인 빌드 전용 로고 (상표 이슈 방지)
+ClaudeUsageWidget/Assets.xcassets/ClaudeLogo.imageset/
+ClaudeUsageWidget/Assets.xcassets/AppIcon.appiconset/
