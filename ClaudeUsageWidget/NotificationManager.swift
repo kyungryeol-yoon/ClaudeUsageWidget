@@ -41,27 +41,30 @@ final class NotificationManager {
         guard settings.notificationsEnabled else { return }
         requestAuthorizationIfNeeded()
 
+        let fiveHourLabel = String(localized: "5-hour")
+        let weeklyLabel   = String(localized: "weekly")
+
         if settings.thresholdAlertsEnabled {
             checkBucket(value: usage.fiveHour,
                         resetsAt: usage.fiveHourResetsAt,
-                        bucketLabel: "5시간",
+                        bucketLabel: fiveHourLabel,
                         firedKey: Self.kFiredFiveHour,
                         windowKey: Self.kFiveHourWindowKey)
 
             checkBucket(value: usage.weekly,
                         resetsAt: usage.weeklyResetsAt,
-                        bucketLabel: "주간",
+                        bucketLabel: weeklyLabel,
                         firedKey: Self.kFiredWeekly,
                         windowKey: Self.kWeeklyWindowKey)
         }
 
         if settings.resetReminderEnabled {
             scheduleResetReminder(resetsAt: usage.fiveHourResetsAt,
-                                  bucketLabel: "5시간",
+                                  bucketLabel: fiveHourLabel,
                                   identifierKey: Self.kScheduledFiveHour,
                                   leadMinutes: settings.resetReminderMinutes)
             scheduleResetReminder(resetsAt: usage.weeklyResetsAt,
-                                  bucketLabel: "주간",
+                                  bucketLabel: weeklyLabel,
                                   identifierKey: Self.kScheduledWeekly,
                                   leadMinutes: settings.resetReminderMinutes)
         }
@@ -99,8 +102,8 @@ final class NotificationManager {
         let actualPct = Int(value * 100)
 
         let content = UNMutableNotificationContent()
-        content.title = "Claude \(bucketLabel) 사용량 \(pct)% 도달"
-        content.body = "현재 \(actualPct)% 사용 중입니다."
+        content.title = String(localized: "Claude \(bucketLabel) usage reached \(pct)%")
+        content.body = String(localized: "Currently at \(actualPct)%.")
         content.sound = threshold >= 0.95 ? .defaultCritical : .default
 
         let request = UNNotificationRequest(
@@ -132,8 +135,8 @@ final class NotificationManager {
         center.removePendingNotificationRequests(withIdentifiers: [identifier])
 
         let content = UNMutableNotificationContent()
-        content.title = "Claude \(bucketLabel) 한도 리셋 임박"
-        content.body = "\(leadMinutes)분 뒤 \(bucketLabel) 사용량이 초기화됩니다."
+        content.title = String(localized: "Claude \(bucketLabel) limit resets soon")
+        content.body = String(localized: "Your \(bucketLabel) usage resets in \(leadMinutes) minutes.")
         content.sound = .default
 
         let interval = max(1, fireDate.timeIntervalSinceNow)

@@ -12,11 +12,11 @@ enum DisplayStyle: String, CaseIterable, Identifiable, Codable {
     var id: String { rawValue }
     var label: String {
         switch self {
-        case .ring:      return "링 + 퍼센트"
-        case .dual:      return "5시간 · 주간 듀얼"
-        case .bar:       return "바 + 퍼센트"
-        case .dot:       return "도트 + 퍼센트"
-        case .countdown: return "리셋까지 카운트다운"
+        case .ring:      return String(localized: "Ring + percent")
+        case .dual:      return String(localized: "Dual (5h · weekly)")
+        case .bar:       return String(localized: "Bar + percent")
+        case .dot:       return String(localized: "Dot + percent")
+        case .countdown: return String(localized: "Reset countdown")
         }
     }
 }
@@ -28,7 +28,7 @@ enum ResetReminderLead: Int, CaseIterable, Identifiable, Codable {
     case thirtyMin = 30
 
     var id: Int { rawValue }
-    var label: String { "\(rawValue)분 전" }
+    var label: String { String(localized: "\(rawValue) min before") }
 }
 
 enum RefreshInterval: Int, CaseIterable, Identifiable, Codable {
@@ -40,15 +40,14 @@ enum RefreshInterval: Int, CaseIterable, Identifiable, Codable {
     
     var id: Int { rawValue }
     var label: String {
-        switch self {
-        case .fiveMin:   return "5분"
-        case .tenMin:    return "10분"
-        case .twentyMin: return "20분"
-        case .thirtyMin: return "30분"
-        case .oneHour:   return "1시간"
+        if rawValue >= 3600 {
+            let hours = rawValue / 3600
+            return String(localized: "\(hours) hour")
         }
+        let minutes = rawValue / 60
+        return String(localized: "\(minutes) min")
     }
-    
+
     var seconds: TimeInterval { TimeInterval(rawValue) }
 }
 
@@ -64,12 +63,12 @@ enum MenuBarIcon: String, CaseIterable, Identifiable, Codable {
     
     var label: String {
         switch self {
-        case .claudeLogo: return "Claude 로고"
-        case .sparkle:    return "✦ 반짝임"
-        case .sparkles:   return "✦✧ 반짝임 (다중)"
-        case .star:       return "★ 별"
-        case .bolt:       return "⚡ 번개"
-        case .none:       return "(없음)"
+        case .claudeLogo: return String(localized: "Claude logo")
+        case .sparkle:    return String(localized: "✦ Sparkle")
+        case .sparkles:   return String(localized: "✦✧ Sparkles")
+        case .star:       return String(localized: "★ Star")
+        case .bolt:       return String(localized: "⚡ Bolt")
+        case .none:       return String(localized: "(None)")
         }
     }
     

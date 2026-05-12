@@ -9,11 +9,11 @@ enum UsageFetchError: LocalizedError {
     
     var errorDescription: String? {
         switch self {
-        case .invalidResponse: return "잘못된 응답입니다."
-        case .unauthorized:    return "인증 실패. 'claude login'을 다시 실행하세요."
-        case .rateLimited:     return "사용량 한도 도달. 잠시 후 다시 시도합니다."
-        case .httpError(let code): return "HTTP 오류: \(code)"
-        case .decodingFailed(let msg): return "응답 파싱 실패: \(msg)"
+        case .invalidResponse: return String(localized: "Invalid response.")
+        case .unauthorized:    return String(localized: "Authentication failed. Run 'claude login' again.")
+        case .rateLimited:     return String(localized: "Rate limit reached. Will retry shortly.")
+        case .httpError(let code): return String(localized: "HTTP error: \(code)")
+        case .decodingFailed(let msg): return String(localized: "Failed to parse response: \(msg)")
         }
     }
 }

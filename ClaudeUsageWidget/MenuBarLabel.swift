@@ -94,13 +94,13 @@ struct MenuBarLabel: View {
         ].compactMap { $0 }
 
         guard let next = candidates.min(by: { $0.date < $1.date }) else { return "—" }
-        let remaining = ResetTimeFormatter.shortTimeUntil(next.date, now: now)
+        let remaining = ResetTimeFormatter.compact(next.date, now: now)
         return "\(next.label) \(remaining)"
     }
 
     private func formattedUsageText(_ usage: Usage) -> String {
         let pct = Int(usage.fiveHour * 100)
-        let time = ResetTimeFormatter.shortTimeUntil(usage.fiveHourResetsAt)
+        let time = ResetTimeFormatter.compact(usage.fiveHourResetsAt)
         
         // 100%인 경우 타이머만 표시
         if usage.fiveHour >= 1.0 {

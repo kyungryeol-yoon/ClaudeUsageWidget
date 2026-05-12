@@ -100,7 +100,7 @@ struct PopoverView: View {
 
     // MARK: - Reusable subviews
 
-    private func sectionHeader(_ title: String) -> some View {
+    private func sectionHeader(_ title: LocalizedStringKey) -> some View {
         Text(title)
             .font(.system(size: 10, weight: .semibold, design: .monospaced))
             .foregroundStyle(.white.opacity(0.45))
@@ -110,7 +110,7 @@ struct PopoverView: View {
             .padding(.bottom, 6)
     }
 
-    private func usageRow(label: String, value: Double?, resetAt: Date?) -> some View {
+    private func usageRow(label: LocalizedStringKey, value: Double?, resetAt: Date?) -> some View {
         let pct   = value.map { Int($0 * 100) } ?? 0
         let color = barColor(value ?? 0)
 
@@ -128,7 +128,7 @@ struct PopoverView: View {
             UsageBar(value: value ?? 0, color: color)
                 .frame(height: 7)
 
-            Text(ResetTimeFormatter.timeUntilEnglish(resetAt))
+            Text(ResetTimeFormatter.resetLine(resetAt))
                 .font(.system(size: 11, design: .monospaced))
                 .foregroundStyle(.white.opacity(0.45))
         }
@@ -188,7 +188,7 @@ struct SettingsPanel: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            settingRow(label: "메뉴바 아이콘") {
+            settingRow(label: "Menu bar icon") {
                 Picker("", selection: $settings.menuBarIcon) {
                     ForEach(MenuBarIcon.allCases) { icon in
                         Text(icon.label).tag(icon)
@@ -198,7 +198,7 @@ struct SettingsPanel: View {
                 .pickerStyle(.menu)
             }
 
-            settingRow(label: "메뉴바 표시") {
+            settingRow(label: "Menu bar display") {
                 Picker("", selection: $settings.displayStyle) {
                     ForEach(DisplayStyle.allCases) { style in
                         Text(style.label).tag(style)
@@ -207,16 +207,16 @@ struct SettingsPanel: View {
                 .labelsHidden()
                 .pickerStyle(.menu)
                 .disabled(settings.menuBarIcon != .none)
-                
+
                 if settings.menuBarIcon != .none {
-                    Text("아이콘 사용 시 스타일은 텍스트로 고정됩니다.")
+                    Text("Icon mode locks the style to text only.")
                         .font(.system(size: 9))
                         .foregroundStyle(.orange.opacity(0.8))
                         .padding(.top, -2)
                 }
             }
 
-            settingRow(label: "새로고침 주기") {
+            settingRow(label: "Refresh interval") {
                 Picker("", selection: $settings.refreshInterval) {
                     ForEach(RefreshInterval.allCases) { interval in
                         Text(interval.label).tag(interval)
@@ -226,13 +226,13 @@ struct SettingsPanel: View {
                 .pickerStyle(.menu)
             }
 
-            Toggle("메뉴바에 남은 시간 표시", isOn: $settings.showTimer)
+            Toggle("Show remaining time in menu bar", isOn: $settings.showTimer)
                 .font(.system(size: 11, weight: .medium, design: .monospaced))
                 .foregroundStyle(.white.opacity(0.8))
                 .toggleStyle(SwitchToggleStyle(tint: .accentColor))
                 .padding(.top, 4)
 
-            Toggle("로그인 시 자동 실행", isOn: $settings.launchAtLogin)
+            Toggle("Launch at login", isOn: $settings.launchAtLogin)
                 .font(.system(size: 11, weight: .medium, design: .monospaced))
                 .foregroundStyle(.white.opacity(0.8))
                 .toggleStyle(SwitchToggleStyle(tint: .accentColor))
@@ -242,24 +242,24 @@ struct SettingsPanel: View {
                 .frame(height: 1)
                 .padding(.vertical, 4)
 
-            Toggle("알림 사용", isOn: $settings.notificationsEnabled)
+            Toggle("Notifications", isOn: $settings.notificationsEnabled)
                 .font(.system(size: 11, weight: .medium, design: .monospaced))
                 .foregroundStyle(.white.opacity(0.8))
                 .toggleStyle(SwitchToggleStyle(tint: .accentColor))
 
-            Toggle("60% / 85% / 95% 임계 알림", isOn: $settings.thresholdAlertsEnabled)
-                .font(.system(size: 11, weight: .medium, design: .monospaced))
-                .foregroundStyle(.white.opacity(0.8))
-                .toggleStyle(SwitchToggleStyle(tint: .accentColor))
-                .disabled(!settings.notificationsEnabled)
-
-            Toggle("리셋 임박 알림", isOn: $settings.resetReminderEnabled)
+            Toggle("Threshold alerts at 60, 85, 95", isOn: $settings.thresholdAlertsEnabled)
                 .font(.system(size: 11, weight: .medium, design: .monospaced))
                 .foregroundStyle(.white.opacity(0.8))
                 .toggleStyle(SwitchToggleStyle(tint: .accentColor))
                 .disabled(!settings.notificationsEnabled)
 
-            settingRow(label: "리셋 알림 시점") {
+            Toggle("Reset reminder", isOn: $settings.resetReminderEnabled)
+                .font(.system(size: 11, weight: .medium, design: .monospaced))
+                .foregroundStyle(.white.opacity(0.8))
+                .toggleStyle(SwitchToggleStyle(tint: .accentColor))
+                .disabled(!settings.notificationsEnabled)
+
+            settingRow(label: "Reminder lead time") {
                 Picker("", selection: Binding(
                     get: { ResetReminderLead(rawValue: settings.resetReminderMinutes) ?? .tenMin },
                     set: { settings.resetReminderMinutes = $0.rawValue }
@@ -278,7 +278,7 @@ struct SettingsPanel: View {
         .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
-    private func settingRow<Content: View>(label: String, @ViewBuilder content: () -> Content) -> some View {
+    private func settingRow<Content: View>(label: LocalizedStringKey, @ViewBuilder content: () -> Content) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(label)
                 .font(.system(size: 10, weight: .semibold, design: .monospaced))

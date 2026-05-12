@@ -27,11 +27,11 @@ enum CredentialsError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .notFound:
-            return "Claude Code 로그인이 필요합니다. 터미널에서 'claude login'을 실행하세요."
+            return String(localized: "Claude Code login required. Run 'claude login' in a terminal.")
         case .accessDenied(let status):
-            return "Keychain 접근이 거부되었습니다 (코드: \(status))"
+            return String(localized: "Keychain access denied (code: \(Int(status)))")
         case .invalidFormat:
-            return "Keychain 데이터 형식이 올바르지 않습니다."
+            return String(localized: "Keychain data is in an unexpected format.")
         }
     }
 }
