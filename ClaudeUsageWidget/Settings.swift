@@ -7,16 +7,28 @@ enum DisplayStyle: String, CaseIterable, Identifiable, Codable {
     case dual
     case bar
     case dot
-    
+    case countdown
+
     var id: String { rawValue }
     var label: String {
         switch self {
-        case .ring: return "링 + 퍼센트"
-        case .dual: return "5시간 · 주간 듀얼"
-        case .bar:  return "바 + 퍼센트"
-        case .dot:  return "도트 + 퍼센트"
+        case .ring:      return "링 + 퍼센트"
+        case .dual:      return "5시간 · 주간 듀얼"
+        case .bar:       return "바 + 퍼센트"
+        case .dot:       return "도트 + 퍼센트"
+        case .countdown: return "리셋까지 카운트다운"
         }
     }
+}
+
+enum ResetReminderLead: Int, CaseIterable, Identifiable, Codable {
+    case fiveMin = 5
+    case tenMin = 10
+    case fifteenMin = 15
+    case thirtyMin = 30
+
+    var id: Int { rawValue }
+    var label: String { "\(rawValue)분 전" }
 }
 
 enum RefreshInterval: Int, CaseIterable, Identifiable, Codable {
@@ -95,7 +107,23 @@ final class AppSettings: ObservableObject {
     @Published var showTimer: Bool {
         didSet { UserDefaults.standard.set(showTimer, forKey: "showTimer") }
     }
-    
+
+    @Published var notificationsEnabled: Bool {
+        didSet { UserDefaults.standard.set(notificationsEnabled, forKey: "notificationsEnabled") }
+    }
+
+    @Published var thresholdAlertsEnabled: Bool {
+        didSet { UserDefaults.standard.set(thresholdAlertsEnabled, forKey: "thresholdAlertsEnabled") }
+    }
+
+    @Published var resetReminderEnabled: Bool {
+        didSet { UserDefaults.standard.set(resetReminderEnabled, forKey: "resetReminderEnabled") }
+    }
+
+    @Published var resetReminderMinutes: Int {
+        didSet { UserDefaults.standard.set(resetReminderMinutes, forKey: "resetReminderMinutes") }
+    }
+
     @Published var launchAtLogin: Bool {
         didSet {
             do {
@@ -125,6 +153,15 @@ final class AppSettings: ObservableObject {
         self.menuBarIcon = MenuBarIcon(rawValue: iconRaw) ?? .claudeLogo
         
         self.showTimer = UserDefaults.standard.bool(forKey: "showTimer")
+
+        let ud = UserDefaults.standard
+        // 첫 실행 기본값: 알림 끔, 켜면 임계치+리셋 임박 둘 다 기본 ON
+        self.notificationsEnabled = ud.object(forKey: "notificationsEnabled") as? Bool ?? false
+        self.thresholdAlertsEnabled = ud.object(forKey: "thresholdAlertsEnabled") as? Bool ?? true
+        self.resetReminderEnabled = ud.object(forKey: "resetReminderEnabled") as? Bool ?? true
+        let savedLead = ud.integer(forKey: "resetReminderMinutes")
+        self.resetReminderMinutes = ResetReminderLead(rawValue: savedLead)?.rawValue ?? ResetReminderLead.tenMin.rawValue
+
         self.launchAtLogin = SMAppService.mainApp.status == .enabled
     }
 }

@@ -49,7 +49,7 @@ struct MenuBarLabel: View {
     @ViewBuilder
     private func styleContent(usage: Usage) -> some View {
         let showGraphic = settings.menuBarIcon == .none
-        
+
         switch settings.displayStyle {
         case .ring:
             HStack(spacing: 4) {
@@ -78,7 +78,24 @@ struct MenuBarLabel: View {
                 Text(formattedUsageText(usage))
                     .monospacedDigit()
             }
+        case .countdown:
+            TimelineView(.periodic(from: .now, by: 60)) { ctx in
+                Text(countdownText(usage: usage, now: ctx.date))
+                    .monospacedDigit()
+            }
         }
+    }
+
+    /// `.countdown` 스타일용. 가까운 쪽(5시간 vs 주간) 리셋까지 남은 시간을 메뉴바에 노출.
+    private func countdownText(usage: Usage, now: Date) -> String {
+        let candidates: [(label: String, date: Date)] = [
+            usage.fiveHourResetsAt.map { ("5h", $0) },
+            usage.weeklyResetsAt.map   { ("7d", $0) },
+        ].compactMap { $0 }
+
+        guard let next = candidates.min(by: { $0.date < $1.date }) else { return "—" }
+        let remaining = ResetTimeFormatter.shortTimeUntil(next.date, now: now)
+        return "\(next.label) \(remaining)"
     }
 
     private func formattedUsageText(_ usage: Usage) -> String {

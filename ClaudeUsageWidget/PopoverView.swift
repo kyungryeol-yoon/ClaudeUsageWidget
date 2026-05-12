@@ -236,6 +236,42 @@ struct SettingsPanel: View {
                 .font(.system(size: 11, weight: .medium, design: .monospaced))
                 .foregroundStyle(.white.opacity(0.8))
                 .toggleStyle(SwitchToggleStyle(tint: .accentColor))
+
+            Rectangle()
+                .fill(Color.white.opacity(0.12))
+                .frame(height: 1)
+                .padding(.vertical, 4)
+
+            Toggle("알림 사용", isOn: $settings.notificationsEnabled)
+                .font(.system(size: 11, weight: .medium, design: .monospaced))
+                .foregroundStyle(.white.opacity(0.8))
+                .toggleStyle(SwitchToggleStyle(tint: .accentColor))
+
+            Toggle("60% / 85% / 95% 임계 알림", isOn: $settings.thresholdAlertsEnabled)
+                .font(.system(size: 11, weight: .medium, design: .monospaced))
+                .foregroundStyle(.white.opacity(0.8))
+                .toggleStyle(SwitchToggleStyle(tint: .accentColor))
+                .disabled(!settings.notificationsEnabled)
+
+            Toggle("리셋 임박 알림", isOn: $settings.resetReminderEnabled)
+                .font(.system(size: 11, weight: .medium, design: .monospaced))
+                .foregroundStyle(.white.opacity(0.8))
+                .toggleStyle(SwitchToggleStyle(tint: .accentColor))
+                .disabled(!settings.notificationsEnabled)
+
+            settingRow(label: "리셋 알림 시점") {
+                Picker("", selection: Binding(
+                    get: { ResetReminderLead(rawValue: settings.resetReminderMinutes) ?? .tenMin },
+                    set: { settings.resetReminderMinutes = $0.rawValue }
+                )) {
+                    ForEach(ResetReminderLead.allCases) { lead in
+                        Text(lead.label).tag(lead)
+                    }
+                }
+                .labelsHidden()
+                .pickerStyle(.menu)
+                .disabled(!settings.notificationsEnabled || !settings.resetReminderEnabled)
+            }
         }
         .padding(12)
         .background(Color.white.opacity(0.07))
