@@ -1,4 +1,5 @@
 import SwiftUI
+import AppKit
 
 private let kBg = Color(red: 0.11, green: 0.21, blue: 0.42)
 
@@ -22,6 +23,9 @@ struct PopoverView: View {
         .frame(width: 300)
         .background(kBg)
         .foregroundStyle(.white)
+        .onReceive(NotificationCenter.default.publisher(for: NSWindow.didResignKeyNotification)) { _ in
+            showSettings = false
+        }
     }
 
     // MARK: - Main content
