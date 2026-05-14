@@ -77,9 +77,12 @@ class UsageViewModel: ObservableObject {
             self.lastUpdated = Date()
             self.lastError = nil
             self.isStale = false
-            
+
             // 성공 시 캐시에 저장
             saveUsageToCache(newUsage)
+
+            // 알림 처리 (임계치 + 리셋 임박)
+            NotificationManager.shared.handle(usage: newUsage)
             
         } catch {
             print("Refresh error: \(error)")
