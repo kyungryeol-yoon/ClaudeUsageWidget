@@ -3,6 +3,7 @@ import AppKit
 
 struct MenuBarLabel: View {
     let usage: Usage?
+    let now: Date
     @ObservedObject private var settings = AppSettings.shared
 
     var body: some View {
@@ -79,10 +80,8 @@ struct MenuBarLabel: View {
                     .monospacedDigit()
             }
         case .countdown:
-            TimelineView(.periodic(from: .now, by: 60)) { ctx in
-                Text(countdownText(usage: usage, now: ctx.date))
-                    .monospacedDigit()
-            }
+            Text(countdownText(usage: usage, now: now))
+                .monospacedDigit()
         }
     }
 
@@ -100,7 +99,7 @@ struct MenuBarLabel: View {
 
     private func formattedUsageText(_ usage: Usage) -> String {
         let pct = Int(usage.fiveHour * 100)
-        let time = ResetTimeFormatter.compact(usage.fiveHourResetsAt)
+        let time = ResetTimeFormatter.compact(usage.fiveHourResetsAt, now: now)
         
         // 100%인 경우 타이머만 표시
         if usage.fiveHour >= 1.0 {

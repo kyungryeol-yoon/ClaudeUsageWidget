@@ -8,7 +8,7 @@ struct ClaudeUsageWidgetApp: App {
         MenuBarExtra {
             PopoverView(viewModel: viewModel)
         } label: {
-            MenuBarLabel(usage: viewModel.usage)
+            MenuBarLabel(usage: viewModel.usage, now: viewModel.clockTick)
         }
         .menuBarExtraStyle(.window)
     }

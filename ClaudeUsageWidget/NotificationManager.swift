@@ -20,7 +20,7 @@ final class NotificationManager {
     private static let kScheduledFiveHour = "notif_scheduledReset_fiveHour" // String (resetsAt iso for which reminder was scheduled)
     private static let kScheduledWeekly   = "notif_scheduledReset_weekly"
 
-    private let center = UNUserNotificationCenter.current()
+    nonisolated private let center = UNUserNotificationCenter.current()
 
     private init() {}
 

@@ -1,73 +1,43 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "—" : {
       "shouldTranslate" : false
     },
-    "Authentication failed. Run 'claude login' again." : {
+    "(None)" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Authentication failed. Run 'claude login' again." } },
-        "ko" : { "stringUnit" : { "state" : "translated", "value" : "인증 실패. 'claude login'을 다시 실행하세요." } }
-      }
-    },
-    "Claude Code login required. Run 'claude login' in a terminal." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Claude Code login required. Run 'claude login' in a terminal." } },
-        "ko" : { "stringUnit" : { "state" : "translated", "value" : "Claude Code 로그인이 필요합니다. 터미널에서 'claude login'을 실행하세요." } }
-      }
-    },
-    "Failed to parse response: %@" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Failed to parse response: %@" } },
-        "ko" : { "stringUnit" : { "state" : "translated", "value" : "응답 파싱 실패: %@" } }
-      }
-    },
-    "HTTP error: %lld" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "HTTP error: %lld" } },
-        "ko" : { "stringUnit" : { "state" : "translated", "value" : "HTTP 오류: %lld" } }
-      }
-    },
-    "Invalid response." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Invalid response." } },
-        "ko" : { "stringUnit" : { "state" : "translated", "value" : "잘못된 응답입니다." } }
-      }
-    },
-    "Keychain access denied (code: %lld)" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Keychain access denied (code: %lld)" } },
-        "ko" : { "stringUnit" : { "state" : "translated", "value" : "Keychain 접근이 거부되었습니다 (코드: %lld)" } }
-      }
-    },
-    "Keychain data is in an unexpected format." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Keychain data is in an unexpected format." } },
-        "ko" : { "stringUnit" : { "state" : "translated", "value" : "Keychain 데이터 형식이 올바르지 않습니다." } }
-      }
-    },
-    "Rate limit reached. Will retry shortly." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Rate limit reached. Will retry shortly." } },
-        "ko" : { "stringUnit" : { "state" : "translated", "value" : "사용량 한도 도달. 잠시 후 다시 시도합니다." } }
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(None)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(없음)"
+          }
+        }
       }
     },
     "%lld hour" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "%lld hour" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld hour"
+          }
         },
         "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "%lld시간" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld시간"
+          }
         }
       }
     },
@@ -75,10 +45,16 @@
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "%lld min" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
         },
         "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "%lld분" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld분"
+          }
         }
       }
     },
@@ -86,406 +62,36 @@
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "%lld min before" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min before"
+          }
         },
         "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "%lld분 전" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld분 전"
+          }
         }
       }
     },
-    "(None)" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "(None)" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "(없음)" }
-        }
-      }
-    },
-    "5-hour" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "5-hour" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "5시간" }
-        }
-      }
-    },
-    "5-hour limit" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "5-hour limit" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "5시간 한도" }
-        }
-      }
-    },
-    "All models" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "All models" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "전체 모델" }
-        }
-      }
-    },
-    "Bar + percent" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Bar + percent" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "바 + 퍼센트" }
-        }
-      }
-    },
-    "Claude %@ limit resets soon" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Claude %@ limit resets soon" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "Claude %@ 한도 리셋 임박" }
-        }
-      }
-    },
-    "Claude %@ usage reached %lld%%" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Claude %@ usage reached %lld%%" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "Claude %1$@ 사용량 %2$lld%% 도달" }
-        }
-      }
-    },
-    "Claude logo" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Claude logo" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "Claude 로고" }
-        }
-      }
-    },
-    "CURRENT SESSION" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "CURRENT SESSION" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "현재 세션" }
-        }
-      }
-    },
-    "Currently at %lld%%." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Currently at %lld%%." }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "현재 %lld%% 사용 중입니다." }
-        }
-      }
-    },
-    "Dot + percent" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Dot + percent" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "도트 + 퍼센트" }
-        }
-      }
-    },
-    "Dual (5h · weekly)" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Dual (5h · weekly)" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "5시간 · 주간 듀얼" }
-        }
-      }
-    },
-    "Icon mode locks the style to text only." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Icon mode locks the style to text only." }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "아이콘 사용 시 스타일은 텍스트로 고정됩니다." }
-        }
-      }
-    },
-    "Launch at login" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Launch at login" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "로그인 시 자동 실행" }
-        }
-      }
-    },
-    "Loading…" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Loading…" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "불러오는 중…" }
-        }
-      }
-    },
-    "Menu bar display" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Menu bar display" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "메뉴바 표시" }
-        }
-      }
-    },
-    "Menu bar icon" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Menu bar icon" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "메뉴바 아이콘" }
-        }
-      }
-    },
-    "Notifications" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Notifications" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "알림 사용" }
-        }
-      }
-    },
-    "Quit" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Quit" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "종료" }
-        }
-      }
-    },
-    "Refresh" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Refresh" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "새로고침" }
-        }
-      }
-    },
-    "Refresh interval" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Refresh interval" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "새로고침 주기" }
-        }
-      }
-    },
-    "Reminder lead time" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Reminder lead time" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "리셋 알림 시점" }
-        }
-      }
-    },
-    "Reset countdown" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Reset countdown" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "리셋까지 카운트다운" }
-        }
-      }
-    },
-    "Reset reminder" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Reset reminder" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "리셋 임박 알림" }
-        }
-      }
-    },
-    "Resets in %@" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Resets in %@" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "%@ 후 초기화" }
-        }
-      }
-    },
-    "Resets in —" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Resets in —" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "초기화 시각 —" }
-        }
-      }
-    },
-    "Resets soon" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Resets soon" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "곧 초기화" }
-        }
-      }
-    },
-    "Ring + percent" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Ring + percent" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "링 + 퍼센트" }
-        }
-      }
-    },
-    "Show remaining time in menu bar" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Show remaining time in menu bar" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "메뉴바에 남은 시간 표시" }
-        }
-      }
-    },
-    "Threshold alerts at 60, 85, 95" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Threshold alerts at 60, 85, 95" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "60 / 85 / 95 임계 알림" }
-        }
-      }
-    },
-    "WEEKLY LIMITS" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "WEEKLY LIMITS" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "주간 한도" }
-        }
-      }
-    },
-    "weekly" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "weekly" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "주간" }
-        }
-      }
-    },
-    "Your %@ usage resets in %lld minutes." : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Your %@ usage resets in %lld minutes." }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "%2$lld분 뒤 %1$@ 사용량이 초기화됩니다." }
-        }
-      }
-    },
-    "✦ Sparkle" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "✦ Sparkle" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "✦ 반짝임" }
-        }
-      }
-    },
-    "✦✧ Sparkles" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "✦✧ Sparkles" }
-        },
-        "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "✦✧ 반짝임 (다중)" }
-        }
-      }
+    "%lld%%" : {
+
     },
     "★ Star" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "★ Star" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "★ Star"
+          }
         },
         "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "★ 별" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "★ 별"
+          }
         }
       }
     },
@@ -493,10 +99,743 @@
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "⚡ Bolt" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ Bolt"
+          }
         },
         "ko" : {
-          "stringUnit" : { "state" : "translated", "value" : "⚡ 번개" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚡ 번개"
+          }
+        }
+      }
+    },
+    "✦ Sparkle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✦ Sparkle"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✦ 반짝임"
+          }
+        }
+      }
+    },
+    "✦✧ Sparkles" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✦✧ Sparkles"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "✦✧ 반짝임 (다중)"
+          }
+        }
+      }
+    },
+    "5-hour" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5-hour"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5시간"
+          }
+        }
+      }
+    },
+    "5-hour limit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5-hour limit"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5시간 한도"
+          }
+        }
+      }
+    },
+    "5h %lld%% · 7d %lld%%" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "5h %1$lld%% · 7d %2$lld%%"
+          }
+        }
+      }
+    },
+    "All models" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All models"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전체 모델"
+          }
+        }
+      }
+    },
+    "Authentication failed. Run 'claude login' again." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Authentication failed. Run 'claude login' again."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "인증 실패. 'claude login'을 다시 실행하세요."
+          }
+        }
+      }
+    },
+    "Bar + percent" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bar + percent"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "바 + 퍼센트"
+          }
+        }
+      }
+    },
+    "Claude %@ limit resets soon" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude %@ limit resets soon"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude %@ 한도 리셋 임박"
+          }
+        }
+      }
+    },
+    "Claude %@ usage reached %lld%%" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude %@ usage reached %lld%%"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude %1$@ 사용량 %2$lld%% 도달"
+          }
+        }
+      }
+    },
+    "Claude Code login required. Run 'claude login' in a terminal." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude Code login required. Run 'claude login' in a terminal."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude Code 로그인이 필요합니다. 터미널에서 'claude login'을 실행하세요."
+          }
+        }
+      }
+    },
+    "Claude logo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude logo"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claude 로고"
+          }
+        }
+      }
+    },
+    "CURRENT SESSION" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CURRENT SESSION"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 세션"
+          }
+        }
+      }
+    },
+    "Currently at %lld%%." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Currently at %lld%%."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 %lld%% 사용 중입니다."
+          }
+        }
+      }
+    },
+    "Dot + percent" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dot + percent"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도트 + 퍼센트"
+          }
+        }
+      }
+    },
+    "Dual (5h · weekly)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dual (5h · weekly)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5시간 · 주간 듀얼"
+          }
+        }
+      }
+    },
+    "Failed to parse response: %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Failed to parse response: %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "응답 파싱 실패: %@"
+          }
+        }
+      }
+    },
+    "Hello, world!" : {
+
+    },
+    "HTTP error: %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HTTP error: %lld"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "HTTP 오류: %lld"
+          }
+        }
+      }
+    },
+    "Icon mode locks the style to text only." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icon mode locks the style to text only."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아이콘 사용 시 스타일은 텍스트로 고정됩니다."
+          }
+        }
+      }
+    },
+    "Invalid response." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid response."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잘못된 응답입니다."
+          }
+        }
+      }
+    },
+    "Keychain access denied (code: %lld)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keychain access denied (code: %lld)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keychain 접근이 거부되었습니다 (코드: %lld)"
+          }
+        }
+      }
+    },
+    "Keychain data is in an unexpected format." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keychain data is in an unexpected format."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keychain 데이터 형식이 올바르지 않습니다."
+          }
+        }
+      }
+    },
+    "Launch at login" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Launch at login"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로그인 시 자동 실행"
+          }
+        }
+      }
+    },
+    "Loading…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading…"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "불러오는 중…"
+          }
+        }
+      }
+    },
+    "Menu bar display" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu bar display"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴바 표시"
+          }
+        }
+      }
+    },
+    "Menu bar icon" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu bar icon"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴바 아이콘"
+          }
+        }
+      }
+    },
+    "Notifications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "알림 사용"
+          }
+        }
+      }
+    },
+    "Quit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "종료"
+          }
+        }
+      }
+    },
+    "Rate limit reached. Will retry shortly." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate limit reached. Will retry shortly."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용량 한도 도달. 잠시 후 다시 시도합니다."
+          }
+        }
+      }
+    },
+    "Refresh" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로고침"
+          }
+        }
+      }
+    },
+    "Refresh interval" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh interval"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로고침 주기"
+          }
+        }
+      }
+    },
+    "Reminder lead time" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reminder lead time"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "리셋 알림 시점"
+          }
+        }
+      }
+    },
+    "Reset countdown" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset countdown"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "리셋까지 카운트다운"
+          }
+        }
+      }
+    },
+    "Reset reminder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset reminder"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "리셋 임박 알림"
+          }
+        }
+      }
+    },
+    "Resets in —" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resets in —"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "초기화 시각 —"
+          }
+        }
+      }
+    },
+    "Resets in %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resets in %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 후 초기화"
+          }
+        }
+      }
+    },
+    "Resets soon" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resets soon"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "곧 초기화"
+          }
+        }
+      }
+    },
+    "Ring + percent" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ring + percent"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "링 + 퍼센트"
+          }
+        }
+      }
+    },
+    "Show remaining time in menu bar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show remaining time in menu bar"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴바에 남은 시간 표시"
+          }
+        }
+      }
+    },
+    "Threshold alerts at 60, 85, 95" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Threshold alerts at 60, 85, 95"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "60 / 85 / 95 임계 알림"
+          }
+        }
+      }
+    },
+    "weekly" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "weekly"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주간"
+          }
+        }
+      }
+    },
+    "WEEKLY LIMITS" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WEEKLY LIMITS"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주간 한도"
+          }
+        }
+      }
+    },
+    "Your %@ usage resets in %lld minutes." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your %@ usage resets in %lld minutes."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$lld분 뒤 %1$@ 사용량이 초기화됩니다."
+          }
         }
       }
     }

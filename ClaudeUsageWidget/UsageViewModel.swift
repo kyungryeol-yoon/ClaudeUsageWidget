@@ -15,9 +15,11 @@ class UsageViewModel: ObservableObject {
     @Published var lastUpdated: Date?
     @Published var isLoading = false
     @Published var isStale = false  // 마지막 갱신이 실패해서 캐시된 값을 보여주는 중
-    
+    @Published var clockTick: Date = Date()  // 메뉴바 카운트다운 갱신용 (30초 주기)
+
     private let settings = AppSettings.shared
     private var timer: Timer?
+    private var clockTimer: Timer?
     private var settingsCancellable: AnyCancellable?
     
     // 캐시 키
@@ -45,7 +47,8 @@ class UsageViewModel: ObservableObject {
         
         Task { await refresh() }
         restartTimer()
-        
+        startClock()
+
         settingsCancellable = settings.$refreshInterval
             .dropFirst()
             .sink { [weak self] _ in
@@ -54,9 +57,19 @@ class UsageViewModel: ObservableObject {
                 }
             }
     }
-    
+
     deinit {
         timer?.invalidate()
+        clockTimer?.invalidate()
+    }
+
+    private func startClock() {
+        clockTimer?.invalidate()
+        clockTimer = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { [weak self] _ in
+            Task { @MainActor [weak self] in
+                self?.clockTick = Date()
+            }
+        }
     }
     
     func refresh() async {
